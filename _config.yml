@@ -80,7 +80,7 @@ graffiti_page:
 
 home-img:
   image: /public/img/crayon-shinchan.jpeg
-  caption: ''
+  caption: 'Run, Kid. Run.'
 
 
 # Puglins
@@ -100,3 +100,4 @@ tipue_search:
         files: [search.html, index.html, tags.html]
         categories: []
         tags: []
+  
