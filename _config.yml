@@ -17,7 +17,7 @@ sass:
   style: compressed
   sass_dir: _scss    
 paginate: 5
-paginate_path: '/study/page:num'
+paginate_path: '/blog/page:num'
 permalink: pretty
 
 version: 1.0.0
@@ -41,30 +41,47 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
-  Study:           
-    - '/study/'
-    - { Math: '/study/math/' }
-    - { Machine Learning: '/study/ml/' }
-    - { DSP: '/study/dsp/'}
-    - { Algorithm: '/study/algorithm/'}
-    - { Paper: '/study/paper/'}
+    - '/blog/'
+  Math:
+    - '/blog/math/'
+    - { Linear Algebra: '/blog/math/la/'}
+    - { Probability And Statistics: '/blog/math/pas/'}
+  Machine Learning:
+    - '/blog/ml/'
+    - { Machine Learning: '/blog/ml/ml/'}
+  DSP:
+    - '/blog/dsp/'
+  Algorithm:
+    - '/blog/algorithm/'
+  Paper:
+    - '/blog/paper/'
+    # - { Audio Paper: '/blog/paper/audio'}
   Graffiti:
-    - '/graffiti/'
+    - '/blog/graffiti/'
   About:          
     - '/about/'
   # Github Project: 
   #   - 'https://github.com/JiwonKKim.github.io'
 
-# Where are tags and categories displayed
-# tag_page: '/blog/tags/'
-# study_page: '/blog/study/'
-math_page: '/study/math/'
-ml_page: '/study/ml/'
+# Name of pages and url
+math_page:
+  - ['/blog/math/la/', 'Linear Algebra']
+  - ['/blog/math/pas/', 'Probability And Statistics']
+ml_page:
+  - ['/blog/math/ml/', 'Machine Learning']
+# dsp_page:
+#   - ['/blog/dsp/', 'DSP']
+# algorithm_page:
+#   - ['/blog/algorithm/', 'Algorithm']
+# paper_page:
+#   - ['/blog/paper/audio', 'Audio Paper']
+graffiti_page:
+  - ['/blog/graffiti/', 'Graffiti']
 
-hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+home-img:
+  image: /public/img/crayon-shinchan.jpeg
+  caption: ''
+
 
 # Puglins
 mathjax: true # whether support mathjax

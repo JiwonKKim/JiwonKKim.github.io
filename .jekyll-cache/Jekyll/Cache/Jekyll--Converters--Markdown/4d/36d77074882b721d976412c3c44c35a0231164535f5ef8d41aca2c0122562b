@@ -1,0 +1,166 @@
+I"�6<p><br /><br />
+<strong>이 글을 읽기 전에</strong><br /></p>
+<ul>
+  <li><em>해당 포스팅은 개인적인 지식, 구글링 검색 결과 등을 정리/각색하였습니다.</em></li>
+  <li><em>해당 포스팅은 개인적으로 공부한 내용을 정리한 것으로, 일부 내용에 오류가 있을 수 있습니다.</em></li>
+  <li><em>포스팅에 오류가 있을 시, 댓글로 남겨주시면 감사하겠습니다.</em></li>
+</ul>
+
+<hr />
+
+<p>기계학습을 공부하다 보면 모델/모델링 이라는 단어가 자주 등장합니다. 오늘 우리가 다룰 가우시안 혼합 모델(GMM)에서도 등장하지요. 그렇다면 이 모델링이란 무엇일까요?<br />
+<a href="https://ko.wikipedia.org/wiki/%EC%88%98%ED%95%99%EC%A0%81_%EB%AA%A8%EB%8D%B8">위키피디아</a>에서 발췌한 내용에 따르면 다음과 같습니다.<br /></p>
+<blockquote>
+  <p>A mathematical model is a description of a system using mathematical concepts and language.<br />
+수학적 개념과 언어를 사용한 시스템의 서술이다.<br /></p>
+</blockquote>
+
+<p><br />
+음.. 다소 난해합니다. 저것만으로는 이해하기가 어려워서 제가 자주 애용하는 <a href="http://www.ktword.co.kr/abbr_view.php?nav=2&amp;m_temp1=587&amp;id=736">정보통신기술용어해설</a> 홈페이지를 뒤져봤습니다.<br /></p>
+<ol>
+  <li>모델, 모델링 (Modelling) 이란?</li>
+  <ul>
+    <li>일반적으로, 모두에게 공통적으로 이해되도록 약속된 방식(수식,그림 등)으로 표현하는 것</li>
+    <ul>
+      <li>복잡한 현실세계를 단순화(추상화) 즉, '추상적 체계적으로 표현하는 작업 또는 방법'</li>
+    </ul>
+    <li>공학적으로는, 시스템(체계)적인 특성을 '수학적으로 표현하는 과정(수식화)'</li>  
+    <ul>
+      <li>정량적으로 표현되도록 수학적 언어로 전환시키는 과정</li>
+    </ul>
+  </ul>
+
+  <li>정보 시스템 모델링</li>
+  <ul>
+    <li>정보 모델링</li>
+    <ul>
+      <li>현실세계를 인간이 이해할 수 있는 정보 형태/구조로 변환하는 과정</li>
+    </ul>
+    <li>데이터 모델링</li>  
+    <ul>
+      <li>현실세계의 복잡한 데이터들을 컴퓨터 정보 구조로 변환시키는 과정</li>
+    </ul>
+    <li>프로세스 모델링</li>  
+    <ul>
+      <li>업무활동 등과 관련된 객체를 대상으로 함</li>
+    </ul>
+  </ul>
+
+  <li>수학적 모델링</li>
+  <ul>
+    <li>시스템의 거동(변화)을 나타내는(예측하는) 수학적 모델이 방정식으로써 표현됨</li>
+    <ul>
+      <li>공학에서 다루는 시스템 대부분이 미분방정식으로 수식화시켜 수학적 모델링을 함</li>
+    </ul>
+  </ul>
+
+  <li>확률 모델링 / 통계 모델링</li>
+  <ul>
+    <li>확률적 현상에 대한 확률적 모형화</li>
+    <ul>
+      <li>가능한 발생 확률 형태를 챠트, 표, 수식, 확률함수 등으로 표현 가능</li>
+    </ul>
+    <li>주어진 문제가 확률적 현상을 반영할 때, 이를 수리 모형화하는 경우</li>  
+    <ul>
+      <li>例) 네트워크 모델, 의사결정론, 마르코프 과정, 대기행렬 모델, 시뮬레이션 모델 등</li>
+    </ul>
+  </ul>
+</ol>
+
+<p><br />
+이제야 다소 이해가 됩니다. 결론적으로 모델이란, 어떤 현상을 수학적으로 표현하는 것이라고 생각하면 될 것 같습니다.<br /></p>
+
+<p>여기서 또 간단하게 가우시안 분포와 관련된 용어들을 위키피디아를 통해 정리해보았습니다.<br /></p>
+<ul>
+  <li>
+  확률 변수(Random Variable): 확률적인 과정에 따라 값이 결정되는 변수
+  </li>
+  <li>
+  확률 분포(Probability Distribution): 확률 변수가 특정한 값을 가질 확률을 나타내는 함수
+  </li>
+  <li>
+  가우시안 분포(Gaussian Distribution): 연속 확률 분포의 하나. 정규 분포(Normal Distribution)라고도 불림.
+  </li>
+</ul>
+
+<p>예전부터 이 가우시안 분포처럼 이상적인 형태의 분포가 이 세상에 존재할까에 대한 개인적인 의구심이 항상 들었습니다.<br />
+이에 대한 결론부터 말하자면 ‘있다’ 입니다.<br />
+세상에는 다양한 데이터가 존재하고, 그 데이터는 각각 다양한 형태의 분포를 가지고 있습니다. 자연현상에서 관측되는 데이터들이 대체로 가우시안 분포의 형태를 보인다고 합니다. 예를 들면, 사람의 키/몸무게나 동전 던지기와 같은 데이터가 그렇습니다. 물론 완벽한 가우시안 분포는 아니겠지만요. <strong>즉, 데이터는 각각의 의미는 알 수 없지만, 만약 어떤 분포를 따른다고 한다면 이는 분포를 통해 다른 현상들을 해석하거나 예측할 수 있게 되는 것입니다.</strong> 그리고 이러한 데이터를 표현하기 위한 수단이 바로 모델링입니다.</p>
+
+<center><img src="/assets/pas/01/Fig01_Height.png" width="500" height="300" /></center>
+<center><a href="https://www.usablestats.com/lessons/normal">Fig. 1. Height Distribution of Men and Women</a></center>
+<center>남자와 여자의 키 분포가 이상적인 가우시안 분포의 형태와 비슷하게 나타내지는 것을 볼 수 있다.</center>
+
+<p>그럼 오늘의 포스팅 주제인 GMM에 대하여 알아보도록 하겠습니다.<br /></p>
+
+<h2 id="군집화clustering">군집화(Clustering)</h2>
+
+<p>GMM은 주로 <strong>군집화(Clustering)</strong>을 위해 사용됩니다. 군집화란, 어떤 특정 데이터셋에서 같은 특성(Feature)을 공유하는 클러스터(통계 조사의 대상 범위(모집단)의 요소를 몇 개 모은 단위체)를 찾는 <strong>비지도학습(Will be posted later)</strong> 문제입니다.</p>
+<center><img src="/assets/pas/01/Fig02_Cluster.png" width="350" height="300" /></center>
+<center>Fig. 2. Clustering the data with 2 clusters</center>
+
+<p><br />
+예를 들면, Fig. 2와 같은 데이터가 주어졌고, 이를 두 개의 클러스터로 분류한다면, $\mu_{1}$와 $\mu_{2}$를 중심으로 군집화 할 수 있습니다. 대표적인 군집화 알고리즘으로는 <strong>K-means 군집화(Will be posted later)</strong>가 있습니다. K-means 군집화는 하나의 데이터를 하나의 클러스터에만 연결하지만, 이 하나의 데이터가 다른 클러스터와는 얼마나 연관성이 있는지 알 수 없다는 단점이 있습니다. 이러한 군집화 방식을 Hard Clustering이라고 합니다. GMM은 Hard Clustering과 달리, 하나의 데이터가 클러스터들과 얼마나 연관성이 있는지 알 수 있는 Soft Clustering 방식을 사용합니다.<br /></p>
+
+<h2 id="gmm의-정의">GMM의 정의</h2>
+
+<p>GMM은 $k\in\{ 1, \cdots, K \}$로 정의되는 가우시안 함수로 구성된 함수입니다. 여기서 $K$는 데이터셋에서의 클러스터 개수입니다. 혼합 모델에서 사용되는 각각의 가우시안 함수 $k$는 다음과 같은 매개변수들로 구성됩니다.</p>
+<ul>
+  <li>가우시안 함수의 중심부를 의미하는 평균값 $\mu$</li>
+  <li>가우시안 함수의 너비를 의미하는 공분산 $\Sigma$ (공분산은 다른 함수와의 상관정도 라고 생각하시면 되겠습니다.)</li>
+  <li>가우시안 함수의 크기를 의미하는 혼합 계수 $\pi$</li>
+</ul>
+<p><br />
+그림을 보시면 좀 더 이해가 쉬우실겁니다.
+<br /></p>
+<center><img src="/assets/pas/01/Fig03_GMM.png" width="500" height="300" /></center>
+<center>Fig. 3. GMM with $K=3$</center>
+<p><br /></p>
+
+<p>혼합 계수 $\pi$는 데이터가 해당 클러스터에 포함된 사전 확률이기 때문에, 다음과 같은 식을 만족해야 합니다.</p>
+<p>$$\sum_{k=1}^K \pi_{k}=1\tag{1}$$</p>
+
+<p>우리의 목적은 주어진 데이터의 각 클러스터가 가우시안 분포를 가진다는 가정하에서 GMM을 모델링하는 것입니다. 따라서 우리는 GMM이 최대한 주어진 데이터의 분포와 유사해지도록 위에서 언급된 GMM의 매개변수들을 조정해야 합니다.<br /></p>
+
+<p>가우시안 함수의 식은 다음과 같습니다.</p>
+<p>$$\mathcal{N}(\boldsymbol{x}|\mu,\Sigma)=\frac{1}{(2\pi)^\frac{D}{2}|\Sigma|^\frac{1}{2}}exp(-\frac{1}{2}(\boldsymbol{x}-\mu)^{T}\Sigma^{-1}(\boldsymbol{x}-\mu))\tag{2}$$</p>
+<p>여기서 $\boldsymbol{x}$는 우리의 데이터를 나타내고, $D$는 데이터의 차원 수를 나타냅니다. 만약 우리가 1000개의 데이터, 그리고 그 데이터가 3차원으로 이루어져 있다면 $\boldsymbol{x}$는 $1000{\times}3$, $\mu$는 $1{\times}3$, $\Sigma$는 $3{\times}3$으로 구성된 행렬이 됩니다.<br />
+매개변수를 조금 더 편하게 구하기 위해 (2)의 식에 양변에 로그를 취하면, 하단의 (3)과 같은 식이 됩니다.</p>
+<p>$$\log{\mathcal{N}(\boldsymbol{x}|\mu,\Sigma)}=-\frac{D}{2}\log{2\pi}-\frac{1}{2}\log{\Sigma}-\frac{1}{2}(\boldsymbol{x}-\mu)^{T}\Sigma^{-1}(\boldsymbol{x}-\mu)\tag{3}$$</p>
+
+<p>(2)의 식을 각각 $\mu$와 $\Sigma$로 편미분하고, 그 식이 0이 되는 해를 구하면 가장 최적의 매개변수를 구할 수 있습니다. 이렇게 해는 최대우도추정(Maximum Likelihood Estimation)(<strong>Will be posted later</strong>)로 구한 해와 같습니다.<br /></p>
+
+<h2 id="잠재변수latent-variable">잠재변수(Latent Variable)</h2>
+
+<p>이제 (3)의 식을 미분하여 그 해를 구하면 되지만, 우리는 한 개의 가우시안 함수가 아님 여러 개의 가우시안 함수가 혼합된 GMM을 모델링해야하기 때문에 이를 모두 수행하려면 계산이 복잡해집니다. 따라서 <strong>잠재변수(Latent Variable)</strong>이라는 개념을 식에 도입합니다. 잠재변수란, 직접적으로 관찰/측정이 되지 않는 변수입니다. 이로 인해 다른 변수를 통해서 간접적으로만 측정이 가능한 변수입니다. 즉, 구체적으로 측정되는 변수에 숨어서 어떤 현상에 미치는 요인으로 작용하는 변수를 의미합니다. 예를 들면, 시험 합격 = 머리 + 노력 + 운 에서 우항을 잠재변수로 볼 수 있겠네요.<br /></p>
+
+<p>먼저, 어떤 한 개의 데이터 $\boldsymbol{x}_{n}$가 $k$라는 가우시안 함수의 구성 성분일 확률을 구해봅시다. 이것을 식으로 표현하면 다음과 같습니다.<br /></p>
+<p>$$p(z_{nk}=1|\boldsymbol{x}_{n})\tag{4}$$</p>
+
+<p>여기서 $z_{nk}$는 두 가지의 경우의 수만 갖습니다. $\boldsymbol{x}_{n}$가 $k$라는 가우시안 함수에 포함되거나, 아니거나. 물론 잠재변수의 개념상 잠재변수 $z$가 무엇인지 정확하게 알 수 없을테지만, 이것을 알아내야 GMM의 매개변수를 구할 수 있습니다.<br />
+따라서, 잠재변수 $z$를 가우시안 함수의 크기를 의미하는 매개변수 $\pi$와 연관짓는 식을 다음과 같이 만듭니다.<br /></p>
+<p>$$\pi_{k}=p(z_{k}=1), \boldsymbol{z}=\{ z_{1}, \cdots, z_{K} \}\tag{5}$$</p>
+
+<p>즉, 어떤 한 개의 데이터가 $k$라는 가우시안 함수의 구성 성분일 확률과 가우시안 함수의 크기를 의미하는 혼합 계수와 같아집니다.<br />
+위의 설명들을 통해 우리는 잠재변수 $z$가 독립적임을 알 수 있고, $p(\boldsymbol{z})$를 다음과 같이 표현할 수 있습니다.<br /></p>
+<p>$$p(\boldsymbol{z})=p(z_{1}=1)^{z_{1}}p(z_{2}=1)^{z_{2}}\cdots{p}(z_{K}=1)^{z_{K}}=\prod_{k=1}^K \pi_{k}^{z_{k}}\tag{6}$$</p>
+
+<p>$p(\boldsymbol{z})$를 모델링했으니, 이를 통해 우리에게 주어진 데이터가 $k$라는 가우시안 함수에서 관측될 확률을 모델링할 수 있습니다. 모델링된 확률은 다음과 같습니다.<br /></p>
+<p>$$p(\boldsymbol{x_{n}}|\boldsymbol{z})=\prod_{k=1}^K \mathcal{N}(\boldsymbol{x_{n}}|\mu_{k},\Sigma_{k})^{z_{k}}\tag{7}$$</p>
+
+<p>여기까지 제가 이해한 바로는, $p(\boldsymbol{z})$는 "현재 우리 데이터가 이렇게 구성된 것 같은데..." 하며 만든 모델이 되겠고, $p(\boldsymbol{x_{n}}|\boldsymbol{z})$는 "그래? 그럼 그 모델을 실제 우리 데이터에 적용해서 잘 맞는지 확인해볼까?" 하며 만든 모델이 되겠습니다.</p>
+
+<p>이제 우리가 최종적으로 구하려고 했던 GMM을 모델링할 조건이 만족되었습니다. 위의 식들과 식 (8) 이용하면 $p(\boldsymbol{X})$를 다음과 같이 나타낼 수 있습니다.</p>
+<p>(Bayes's Theorem) $p(X)=\sum_{Y} p(X,Y), \quad p(X,Y)=P(X|Y)P(Y)\tag{8}$</p>
+<p>$$p(\boldsymbol{X})=\prod_{n=1}^N p(\boldsymbol{x}_{n})=\prod_{n=1}^N \sum_{k=1}^K p(\boldsymbol{x}_{n},\boldsymbol{z})\qquad\qquad\qquad\qquad\qquad$$</p>
+<p>$$=\prod_{n=1}^N \sum_{k=1}^K p(\boldsymbol{x}_{n}|\boldsymbol{z})p(\boldsymbol{z})=\prod_{n=1}^N \sum_{k=1}^K \pi_{k}\mathcal{N}(\boldsymbol{x}_{n}|\mu_{k},\Sigma_{k})\tag{9}$$</p>
+<p>이 식의 양변의 로그를 취해주면,</p>
+<p>$$\log{p(\boldsymbol{X})}=\sum_{n=1}^N \log \sum_{k=1}^K \pi_{k}\mathcal{N}(\boldsymbol{x}_{n}|\mu_{k},\Sigma_{k})\tag{10}$$</p>
+
+<p>이제 (10)의 식을 미분해주면 매개변수를 최적화시킬 수 있지만, 식에 $\log$가 있기 때문에 미분하기에는 매우 까다롭습니다. 따라서 매개변수를 최적화시키기 위해서는 <strong>반복법(Iterative Method)</strong>를 적용하여 반복적인 매개변수 업데이트를 통해 최적화해야합니다. 이 때 사용되는 알고리즘을 <strong>기댓값 최대화 알고리즘(Expectation-Maximization Algorithm, EM Algorithm)</strong>이라고 합니다. 다음 포스팅에서는 이 EM 알고리즘에 대해서 이야기하고, 이를 통해 GMM의 최적화된 매개변수를 구하는 과정을 설명하겠습니다.</p>
+
+<h5 id="출처">출처:</h5>
+<p><a href="https://datacookbook.kr/54">DATA COOKBOOK</a><br />
+<a href="https://towardsdatascience.com/gaussian-mixture-models-explained-6986aaf5a95">TOWARDS DATASCIENCE</a><br />
+<a href="https://www.wikipedia.org/">Wikipedia</a><br /></p>
+:ET

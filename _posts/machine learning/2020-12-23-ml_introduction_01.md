@@ -1,15 +1,13 @@
 ---
-layout: page
+layout: post
 title:  "기계학습(Machine learning) 기초 (1)"
-# category: [machine learning]
 category: Machine Learning
-permalink: /study/ml/:year/:month/:day/:title/
-# tags: [machine learning, machine learning, andrew ng, supervised learning, unsupervised learning, 머신러닝, 기계학습, 지도학습, 비지도학습]
-tags: machine learning
-use_math: true
+permalink: /study/ml/ml/:year/:month/:day/:title/
+tags: [Machine Learning, Andrew Ng, Supervised Learning, Unsupervised Learning, 머신러닝, 기계학습, 지도학습, 비지도학습]
 comments: true
 ---
 
+<br><br>
 **이 글을 읽기 전에**<br>
 - _해당 포스팅은 Coursera에 올라와 있는 Andrew Ng 교수님의 Machine Learning 강좌를 정리/각색하였습니다._
 - _해당 포스팅은 개인적으로 공부한 내용을 정리한 것으로, 일부 내용에 오류가 있을 수 있습니다._
@@ -34,7 +32,7 @@ comments: true
 <br>
 먼저 지도학습이란, 가장 일반적인 유형의 기계 학습입니다.<br>
 
-<img src="/assets/ml-ml/01/Fig01_HousingPrice.png" width="600" height="300"> 
+<center><img src="/assets/ml/01/Fig01_HousingPrice.png" width="600" height="300"></center>
 <center>Fig. 1. Housing Price Prediction</center>
 <br>
 대표적인 지도학습 문제입니다. Fig. 1 을 보시면, 가로축은 집의 넓이, 세로축은 집값입니다. 이 데이터를 통해 알 수 있는 것은, 집의 넓이에 비례하여 집값이 올라간다는 것입니다. 따라서, 집의 넓이를 알면 집값 또한 예측이 가능할 수 있습니다.<br>
@@ -51,7 +49,7 @@ comments: true
 
 또 다른 문제를 예로 들어보겠습니다.<br>
 
-<img src="/assets/ml-ml/01/Fig02_BreastCancer.png" width="600" height="300"> 
+<center><img src="/assets/ml/01/Fig02_BreastCancer.png" width="600" height="300"></center>
 <center>Fig. 2. Breast Cancer Prediction</center>
 <br>
 Fig. 2 는 종양의 크기에 따라 유방암이 악성인지 양성인지를 표현한 데이터입니다. 악성이면 빨간색(1,Y), 양성이면 파란색(0,N)로 표현했습니다. 기계학습은 해당 데이터를 학습하여 어떤 종양 크기가 주어지면, 그 종양이 악성인지 양성인지 예측할 수 있습니다. 이 문제는 **분류 문제(Classification Problem)**의 예시 중 하나입니다. 분류의 경우, 회귀와 달리 불연속적인 결과값을 예측합니다.<br>

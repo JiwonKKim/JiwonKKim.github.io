@@ -1,0 +1,14 @@
+---
+layout: default
+title: Machine Learning
+---
+
+{% assign len = site.ml_page | size %}
+
+{% if len > 0 %}
+  {% for page in site.ml_page %}
+    <a class="page-list" href="{{ site.baseurl }}{{ page[0] }}">{{ page[1] }}<br><br>
+  {% endfor %}
+{% else %}
+  <p style='font-size: 40px;'>There are no posts in this section.</p>
+{% endif %}

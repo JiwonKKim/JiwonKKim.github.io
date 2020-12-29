@@ -430,3 +430,18 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Jiwon Kim's SCSS */
+.page-list {
+  font-size: 30px;
+}

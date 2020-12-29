@@ -1,13 +1,13 @@
 ---
-layout: page
+layout: post
 title:  "선형대수(Linear Algebra) 기초 (1)"
-category: [Math]
-permalink: /study/math/:year/:month/:day/:title/
-tags: [linear algebra, machine learning, andrew ng, supervised learning, unsupervised learning, 머신러닝, 기계학습, 지도학습, 비지도학습]
-use_math: true
+category: Linear Algebra
+permalink: /study/math/la/:year/:month/:day/:title/
+tags: [Linear Algebra, Machine Learning, Andrew Ng, Supervised learning, Unsupervised Learning, 머신러닝, 기계학습, 지도학습, 비지도학습]
 comments: true
 ---
 
+<br><br>
 **이 글을 읽기 전에**<br>
 - _해당 포스팅은 Gilbert Strang 교수의 Linear Algebra and Learning from Data-Wellesley-Cambridge Press (2019) 를 정리/각색하였습니다._
 - _해당 포스팅은 개인적으로 공부한 내용을 정리한 것으로, 일부 내용에 오류가 있을 수 있습니다._
