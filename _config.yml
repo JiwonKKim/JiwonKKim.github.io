@@ -90,3 +90,13 @@ disqus_short_name: 'https-jiwonkkim-github-io' # leave blank if you don't want d
 
 # Plugins
 plugins: [jekyll-paginate]
+
+# Tipue Search
+tipue_search:
+    include:
+        pages: false
+        collections: []
+    exclude:
+        files: [search.html, index.html, tags.html]
+        categories: []
+        tags: []
