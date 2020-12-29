@@ -1,18 +1,20 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
+      <!-- 
       <div class="sidebar-personal-info-section">
         <a href="http://gravatar.com/{{ site.author.gravatar }}">
           <img src="http://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=350" title="View on Gravatar" alt="View on Gravatar" />
         </a>
       </div>
+      -->
       <div class="sidebar-personal-info-section">
-        <p>{{ site.author.description }}</p>
+        <p style="font-size: x-large; line-height: normal">{{ site.title }}</p>
       </div>
       {% if site.author.contact %}
       {% assign len = site.author.contact | size %}
@@ -66,8 +68,7 @@
       </span>
 
     {% endfor %}
-
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    
   </nav>
 
   <div class="sidebar-item">
