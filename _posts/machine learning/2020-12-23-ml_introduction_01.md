@@ -61,4 +61,4 @@ Fig. 2 는 종양의 크기에 따라 유방암이 악성인지 양성인지를 
 이번 포스팅은 여기서 마치도록 하며, 다음 포스팅에서는 비지도 학습에 대해서 이야기하도록 하겠습니다.
 
 ##### 출처:
-[Andrew Ng - Machine Learning](https://www.coursera.org/learn/machine-learning)
+- [Andrew Ng - Machine Learning](https://www.coursera.org/learn/machine-learning)
