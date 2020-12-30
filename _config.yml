@@ -71,8 +71,8 @@ ml_page:
   - ['/blog/math/ml/', 'Machine Learning']
 # dsp_page:
 #   - ['/blog/dsp/', 'DSP']
-# algorithm_page:
-#   - ['/blog/algorithm/', 'Algorithm']
+algorithm_page:
+  - ['/blog/algorithm/', 'Algorithm']
 # paper_page:
 #   - ['/blog/paper/audio', 'Audio Paper']
 graffiti_page:
