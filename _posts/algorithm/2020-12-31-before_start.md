@@ -2,7 +2,6 @@
 layout: post
 title:  Algorithm 포스팅을 시작하기 전에...
 category: Algorithm
-permalink: /blog/algorithm/:year/:month/:day/:title/
 tags: [Algorithm, SW Expert Academy]
 comments: true
 ---
