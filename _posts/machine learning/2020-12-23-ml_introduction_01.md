@@ -2,7 +2,6 @@
 layout: post
 title:  "기계학습(Machine learning) 기초 (1)"
 category: Machine Learning
-permalink: /study/ml/ml/:year/:month/:day/:title/
 tags: [Machine Learning, Andrew Ng, Supervised Learning, Unsupervised Learning, 머신러닝, 기계학습, 지도학습, 비지도학습]
 comments: true
 ---

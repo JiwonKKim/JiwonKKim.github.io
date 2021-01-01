@@ -2,7 +2,6 @@
 layout: post
 title:  "01. 선형대수(Linear Algebra) 기초 (1)"
 category: Linear Algebra
-permalink: /study/math/la/:year/:month/:day/:title/
 tags: [Linear Algebra, Machine Learning, Andrew Ng, Supervised learning, Unsupervised Learning, 머신러닝, 기계학습, 지도학습, 비지도학습]
 comments: true
 ---
