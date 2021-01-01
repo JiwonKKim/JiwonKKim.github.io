@@ -4,4 +4,4 @@ User-Agent : Googlebot
 User-Agent : Yeti
 User-Agent : Daumoa
 Allow : /
-Sitemap: http://jiwonkkim.github.io/sitemap.xml
+Sitemap: https://jiwonkkim.github.io/sitemap.xml
