@@ -3,7 +3,7 @@ title: Jiwon K. Kim's Blog
 tagline: Audio Signal Processing & Machine Learning
 description: 개인적으로 공부한 것들을 정리하기 위해 만든 Github 블로그입니다
 baseurl: ''
-url: http://jiwonkkim.github.io
+url: https://jiwonkkim.github.io
 logo: '/public/JK.png'
 
 # Site configurations
@@ -89,7 +89,8 @@ google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google a
 disqus_short_name: 'https-jiwonkkim-github-io' # leave blank if you don't want disqus
 
 # Plugins
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
 
 # Tipue Search
 tipue_search:
