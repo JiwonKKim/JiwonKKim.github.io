@@ -6,16 +6,29 @@
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
+  <meta name="naver-site-verification" content="e42f1dba55318d713f95bcd81e37134fbdb3b7e0" />
+  
   <title>
+    
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
       {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
+    {% endif %}    
+    
   </title>
 
+  <!-- tipuesearch -->
+  <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+  {% if page.tipue_search_active or layout.tipue_search_active %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+  {% endif %}
+  
   <!-- CSS -->
+<<<<<<< HEAD
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/lanyon.css">
@@ -24,10 +37,20 @@
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
   <link rel="shortcut icon" href="/public/favicon.ico">
+=======
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/public/JK.ico">
+>>>>>>> f48e38e3af9011343915f68c55d2b9f1fca62e02
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
+<<<<<<< HEAD
   <script type="text/x-mathjax-config">
 
  MathJax.Hub.Config({
@@ -58,4 +81,12 @@
   ga('send', 'pageview');
 
 </script>
+=======
+  {% if site.mathjax %}
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"> </script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+  </script>
+  {% endif %}
+>>>>>>> f48e38e3af9011343915f68c55d2b9f1fca62e02
 </head>

@@ -1,0 +1,30 @@
+---
+layout: page
+title: Graffiti
+---
+
+{% assign len = site.graffiti_page | size %}
+
+{% if len > 0 %}
+  <div class="tags-expo">
+    <hr/>
+    <div class="tags-expo-section">
+      {% for category in site.categories %}
+        {% if category[0] == 'Graffiti' %}
+          <ul class="tags-expo-posts">
+          {% for post in category[1] %}
+            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+          <li>
+            {{ post.title }}
+            <small class="post-date">{{ post.date | date_to_string }}</small>
+          </li>
+          </a>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% else %}
+  <p style='font-size: 40px;'>There are no posts in this section.</p>
+{% endif %}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 markdown:            redcarpet
 highlighter:         pygments
@@ -13,8 +14,34 @@ title:            Codinfox
 tagline:          'Learning to be Giant.'
 description:      'Blog of YourName. Here are some technical stuff. Some notes about development.'
 url:              http://codinfox.github.io
+=======
+# Site Info
+title: Step By Step
+tagline: Audio Signal Processing & Machine Learning
+description: 개인적으로 공부한 것들을 정리하기 위해 만든 Github 블로그입니다
+baseurl: ''
+url: https://jiwonkkim.github.io
+logo: '/public/JK.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
+>>>>>>> f48e38e3af9011343915f68c55d2b9f1fca62e02
 
 author:
+<<<<<<< HEAD
   name:           'Your Name'
   url:            http://codinfox.github.io
   gravatar:       https://en.gravatar.com/yourname
@@ -29,3 +56,83 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/codinfox/lanyon-codinfox.github.io
+=======
+  name: Jiwon K. Kim
+  description:
+    Majored in Electorics Engineering (B.S.)<br>
+
+    Majoring in Convergence Engineering (M.S.)
+  gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
+  contact:
+    # linkedin:  <hide>
+    github:    https://github.com/JiwonKKim/JiwonKKim.github.io
+    # facebook:  <hide>
+    # twitter:   <hide>
+    # weibo:     <hide>
+    email:     mailto:jwkim6088@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/blog/'
+  Math:
+    - '/blog/math/'
+    - { Linear Algebra: '/blog/math/la/'}
+    - { Probability And Statistics: '/blog/math/pas/'}
+  Machine Learning:
+    - '/blog/ml/'
+    - { Machine Learning: '/blog/ml/ml/'}
+  DSP:
+    - '/blog/dsp/'
+  Algorithm:
+    - '/blog/algorithm/'
+  Paper:
+    - '/blog/paper/'
+    # - { Audio Paper: '/blog/paper/audio'}
+  Graffiti:
+    - '/blog/graffiti/'
+  About:          
+    - '/about/'
+  # Github Project: 
+  #   - 'https://github.com/JiwonKKim.github.io'
+
+# Name of pages and url
+math_page:
+  - ['/blog/math/la/', 'Linear Algebra']
+  - ['/blog/math/pas/', 'Probability And Statistics']
+ml_page:
+  - ['/blog/math/ml/', 'Machine Learning']
+# dsp_page:
+#   - ['/blog/dsp/', 'DSP']
+algorithm_page:
+  - ['/blog/algorithm/', 'Algorithm']
+# paper_page:
+#   - ['/blog/paper/audio', 'Audio Paper']
+graffiti_page:
+  - ['/blog/graffiti/', 'Graffiti']
+
+home-img:
+  image: /public/img/crayon-shinchan.jpeg
+  caption: 'Run, Kid. Run.'
+
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'https-jiwonkkim-github-io' # leave blank if you don't want disqus
+
+# Plugins
+plugins:
+  - jekyll-paginate
+
+# Tipue Search
+tipue_search:
+    include:
+        pages: false
+        collections: []
+    exclude:
+        files: [search.html, index.html, tags.html]
+        categories: []
+        tags: []
+  
+>>>>>>> f48e38e3af9011343915f68c55d2b9f1fca62e02
