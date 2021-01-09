@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-# Dependencies
-markdown:            redcarpet
-highlighter:         pygments
-
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
-
-# Setup
-title:            Codinfox
-tagline:          'Learning to be Giant.'
-description:      'Blog of YourName. Here are some technical stuff. Some notes about development.'
-url:              http://codinfox.github.io
-=======
 # Site Info
 title: Step By Step
 tagline: Audio Signal Processing & Machine Learning
@@ -38,25 +21,8 @@ paginate_path: '/blog/page:num'
 permalink: pretty
 
 version: 1.0.0
->>>>>>> f48e38e3af9011343915f68c55d2b9f1fca62e02
 
 author:
-<<<<<<< HEAD
-  name:           'Your Name'
-  url:            http://codinfox.github.io
-  gravatar:       https://en.gravatar.com/yourname
-  photo:          http://2.gravatar.com/avatar/00000000000000000000000000000000?size=350
-  introduction:   'Some introduction words that will be displayed under the avatar. You may include HTML <a href="#">here</a>.'
-
-paginate:         5
-paginate_path:    '/blog/page:num'
-
-# Custom vars
-version:          1.0.0
-
-github:
-  repo:           https://github.com/codinfox/lanyon-codinfox.github.io
-=======
   name: Jiwon K. Kim
   description:
     Majored in Electorics Engineering (B.S.)<br>
@@ -135,4 +101,3 @@ tipue_search:
         categories: []
         tags: []
   
->>>>>>> f48e38e3af9011343915f68c55d2b9f1fca62e02
