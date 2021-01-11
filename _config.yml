@@ -68,7 +68,7 @@ math_page:
   - ['/blog/math/la/', 'Linear Algebra']
   - ['/blog/math/pas/', 'Probability And Statistics']
 ml_page:
-  - ['/blog/math/ml/', 'Machine Learning']
+  - ['/blog/ml/ml/', 'Machine Learning']
 # dsp_page:
 #   - ['/blog/dsp/', 'DSP']
 algorithm_page:
