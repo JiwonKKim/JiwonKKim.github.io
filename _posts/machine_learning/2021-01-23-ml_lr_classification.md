@@ -120,6 +120,7 @@ Fig. 7 의 왼쪽 그래프는 $y=1$ 일 때 $h_{\theta}(\boldsymbol{x})$ 에 �
 <center><img src="/assets/ml/07_lr_classification/Fig08_cost_function_y=0.png" width="700" height="300"></center>
 <center>Fig. 8. $Cost$ when $y=0$</center>
 
+<br>
 이어서, Fig. 8 의 왼쪽 그래프는 $y=0$ 일 때 $h_{\theta}(\boldsymbol{x})$ 에 따른 $Cost$ 의 값입니다. $y=1$ 일 때와 마찬가지로, $Cost$ 가 왜 이러한 형태를 가지게 되는지는 Fig. 8 의 오른쪽 그래프를 참고하면 알 수 있습니다. $h_{\theta}(\boldsymbol{x})$ 는 0과 1 사이의 값을 갖기 때문에, $\log (1 - h_{\theta}(\boldsymbol{x}))$ 는 Fig. 7 의 오른쪽 그래프와 같은 형태를 띄게 되는 것이죠.
 
 $y=1$ 일 때와 마찬가지로, $y=0$ 이고 $h_{\theta}(\boldsymbol{x})$ 가 0일 때 $Cost$ 또한 0이 됩니다. 반대로, $y=0$ 이고 $h_{\theta}(\boldsymbol{x})$는 1으로 수렴할 때 $Cost$ 는 양의 무한대로 발산하게 됩니다. 예측한 결과가 맞으면 $Cost$ 을 0으로 하여 패널티를 주지 않고, 틀리면 $Cost$ 가 양의 무한대로 만들어 패널티를 줍니다. 이 또한 우리가 원하던 결과입니다. 
