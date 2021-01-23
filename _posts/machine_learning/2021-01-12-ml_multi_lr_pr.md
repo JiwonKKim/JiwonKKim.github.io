@@ -61,7 +61,7 @@ x_{n}
 
 Repeat {<br>
 $\quad \theta_{j} := \theta_{j} - \alpha \frac{\partial}{\partial \theta_{j}} J(\boldsymbol{\theta}) \quad (\frac{\partial}{\partial \theta_{j}} J(\boldsymbol{\theta}) = \frac{1}{m} \sum_{i=1}^m (h_{\theta}(\boldsymbol{x}^{(i)})-y^{(i)})x_{j}^{(i)}) \qquad \qquad \qquad \quad \, (5)$<br>
-} (simultaneously update for every $j = 0, \ldots, n$<br>
+} (simultaneously update for every $j = 0, \ldots, n)$<br>
 
 여기서 $x_{j}^{(i)}$는 $i$ 번째 훈련 데이터셋의 $j$ 번째 Feature를 의미합니다.
 
