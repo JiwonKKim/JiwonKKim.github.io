@@ -144,7 +144,7 @@ J(\boldsymbol{\theta})
 \tag{13}
 $</p>
 
-이러한 식이 어떻게 도출되었는지 당장은 설명하지 않지만, 이 식은 후에 다룰 내용인 **최대 가능도 추정법(Maximu Likelihood Estimation)(Will be posted later)**의 원리를 이용한 통계로부터 유도되었습니다. 그리고 이러한 식을 **Cross Entropy(교차 엔트로피)(Will be Posted Later)**라고 합니다. 지금은 용어만 알아두시면 되겠습니다. 이렇게 표현한 비용함수 $J(\boldsymbol{\theta})$ 는 Convex한 특성을 가지고 있습니다.
+이러한 식이 어떻게 도출되었는지 당장은 설명하지 않지만, 이 식은 후에 다룰 내용인 **최대 가능도 추정법(Maximu Likelihood Estimation)(Will be posted later)**의 원리를 이용한 통계로부터 유도되었습니다. 그리고 이러한 식을 **Binary Cross Entropy(이진 교차 엔트로피)(Will be Posted Later)**라고 합니다. 지금은 용어만 알아두시면 되겠습니다. 이렇게 표현한 비용함수 $J(\boldsymbol{\theta})$ 는 Convex한 특성을 가지고 있습니다.
 
 이제 매개변수 탐색을 위해 비용함수 $J(\boldsymbol{\theta})$ 를 경사 하강법을 통하여 줄여나가 보겠습니다.
 
@@ -177,7 +177,7 @@ Fig. 9 의 세모를 Class 1, 네모를 Class 2, X를 Class 3라고 둡시다. �
 - 선형 함수만을 사용하여 Class를 분류하는 것은 모델이 오류를 범할 확률이 높으므로, 비선형인 Sigmoid 함수를 이용하여 Class를 분류한다.
 - 어떤 데이터를 분류할 때 기준이 되는 선을 Decision Boundary라고 한다.
 - 가설 표현에 Sigmoid 함수가 포함되어 있을 때 비용함수로 MSE를 사용하면 비용함수는 Convex하지 않다.
-- 따라서, 이진 분류에서 가설 표현에 Sigmoid 함수가 포함되어 있을 때 비용함수로 Cross Entropy를 사용하면 비용함수는 Convex하게 된다.
+- 따라서, 이진 분류에서 가설 표현에 Sigmoid 함수가 포함되어 있을 때 비용함수로 Binary Cross Entropy를 사용하면 비용함수는 Convex하게 된다.
 - 어떤 1개의 Class를 기준으로 이 Class에 포함되느냐 아니냐만 생각함으로써 여러가지 Class를 분류하는 방법을 One-vs-all 분류라고 한다.
 
 ---
