@@ -7,7 +7,7 @@ comments: true
 ---
 
 #### [LeetCode] Daily 문제
-##### [Add One Row to Tree](https://leetcode.com/explore/challenge/card/march-leetcoding-challenge-2021/589/week-2-march-8th-march-14th/3666/)
+##### [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree/)
 
 Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.
 
@@ -131,8 +131,10 @@ public:
 ```
 
 오랜만에 C++ 하다보니 #include를 #define으로 썼다. 컴파일 에러를 보고 소스라치게 놀랐다. 이걸 까먹네
+
 C++ 문법 너무 헷갈린다 봐도봐도 모르겠다
+
 Tree의 Node를 Binary Tree에 넣어 Level Order Search를 한다. Target Depth를 찾으면 Node를 Insert하고, Target Depth에서의 Node Insert가 완료되면 코드를 종료한다.
 
 ##### 출처:
-- [Add One Row to Tree](https://leetcode.com/explore/challenge/card/march-leetcoding-challenge-2021/589/week-2-march-8th-march-14th/3666/)
+- [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree/)

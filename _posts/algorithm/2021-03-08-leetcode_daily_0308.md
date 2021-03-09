@@ -7,7 +7,7 @@ comments: true
 ---
 
 #### [LeetCode] Daily 문제
-##### [Remove Palindromic Subsequences](https://leetcode.com/explore/challenge/card/march-leetcoding-challenge-2021/589/week-2-march-8th-march-14th/3665/)
+##### [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/)
 
 Given a string s consisting only of letters 'a' and 'b'. In a single step you can remove one palindromic subsequence from s.
 
@@ -75,4 +75,4 @@ public:
 Paligndromic Subsequences는 Input의 Order는 고려하지만 Continuous할 필요는 없다. 따라서 주어진 Input이 공백인지, Paligndrome인지 아닌지만 고려하면 되는 문제. (사실 정확하게는 모르겠다. Continuous는 고려하지 않고 Order만을 고려하므로 적절하게 Paligndrome한 문자열을 제거하고 나면, 나머지 문자열은 Paligndrome 할 것 같다고 직관적으로만 이해했다... ~~사실 답을 보고 풀었다~~)
 
 ##### 출처:
-- [Remove Palindromic Subsequences](https://leetcode.com/explore/challenge/card/march-leetcoding-challenge-2021/589/week-2-march-8th-march-14th/3665/)
+- [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/)
