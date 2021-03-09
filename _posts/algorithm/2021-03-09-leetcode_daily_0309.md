@@ -134,7 +134,7 @@ public:
 
 C++ 문법 너무 헷갈린다 봐도봐도 모르겠다
 
-Tree의 Node를 Binary Tree에 넣어 Level Order Search를 한다. Target Depth를 찾으면 Node를 Insert하고, Target Depth에서의 Node Insert가 완료되면 코드를 종료한다.
+Tree의 Node Address를 Queue에 넣어 Level Order Search를 한다. Target Depth를 찾으면 Node를 Insert하고, Target Depth에서의 Node Insert가 완료되면 코드를 종료한다.
 
 ##### 출처:
 - [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree/)
