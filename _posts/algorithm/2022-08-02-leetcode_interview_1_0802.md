@@ -31,6 +31,16 @@ Input: nums = [3,2,4], target = 6
 Output: [1,2]
 ```
 
+**Constraints:**
+
+- `2 <= nums.length <= 104`
+- `-109 <= nums[i] <= 109`
+- `-109 <= target <= 109`
+- Only one valid answer exists.
+ 
+Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+**My Solution:**
 ``` python
 import numpy as np
 
@@ -55,15 +65,7 @@ class Solution:
         return answer
 ```
 
-Constraints:
-
-- 2 <= nums.length <= 104
-- -109 <= nums[i] <= 109
-- -109 <= target <= 109
-- Only one valid answer exists.
- 
-
-Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+**My Explanation:**
 
 Input을 미리 sorting 해놓음으로써 O(n2) time complexity를 피해보았다. Example 3와 같이 입력 데이터에 같은 숫자가 포함된 경우도 있어서, sorting하고 풀어도 괜찮을까 싶었지만 다행히 잘 되었다.
 
