@@ -3,6 +3,7 @@ layout: post
 title:  "[LeetCode] Top Interview Questions 1 - Two Sum"
 category: Algorithm
 tags: [Algorithm, LeetCode, Two Sum]
+data: 2022-08-02 22:27:00+0900
 comments: true  
 ---
 
