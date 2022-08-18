@@ -3,7 +3,7 @@ layout: post
 title:  "[LeetCode] Top Interview Questions 7 - Reverse Integer"
 category: Algorithm
 tags: [Algorithm, LeetCode, Reverse Integer]
-data: 2022-08-02 21:15:00+0900
+data: 2022-08-12 21:15:00+0900
 comments: true  
 ---
 
