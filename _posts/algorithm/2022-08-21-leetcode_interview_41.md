@@ -39,8 +39,8 @@ Explanation: The smallest positive integer 1 is missing.
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
-- `-231 <= nums[i] <= 231 - 1`
+- `1 <= nums.length <= 10^5`
+- `-2^31 <= nums[i] <= 2^31 - 1`
 
 **My Solution:**
 ``` python
