@@ -49,7 +49,12 @@ nav:
     - "/blog/ml/"
     - { Machine Learning: "/blog/ml/ml/" }
   DSP:
+<<<<<<< HEAD
     - "/blog/dsp/"
+=======
+    - '/blog/dsp/'
+    - { Audio Signal Processing for Music Applications: '/blog/dsp/asp4ma'}
+>>>>>>> b7025f3 (ASP post 0 updated)
   Algorithm:
     - "/blog/algorithm/"
   Paper:
@@ -67,9 +72,9 @@ math_page:
   - ["/blog/math/la/", "Linear Algebra"]
   - ["/blog/math/pas/", "Probability And Statistics"]
 ml_page:
-  - ["/blog/ml/ml/", "Machine Learning"]
-# dsp_page:
-#   - ['/blog/dsp/', 'DSP']
+  - ['/blog/ml/ml/', 'Machine Learning']
+dsp_page:
+  - ['/blog/dsp/asp4ma', 'Audio Signal Processing for Music Applications']
 algorithm_page:
   - ["/blog/algorithm/", "Algorithm"]
 # paper_page:

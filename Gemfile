@@ -24,5 +24,7 @@ end
 gem 'tzinfo'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-
+# gem 'sassc', '1.12.1'
+gem 'rails'
+gem 'sass-rails'
 gem "webrick", "~> 1.7"
