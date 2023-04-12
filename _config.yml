@@ -25,13 +25,14 @@ version: 1.0.0
 # About/contact
 author:
   name: Jiwon K. Kim
-  description: Majored in Electorics Engineering (B.S.)<br>
-
-    Majoring in Convergence Engineering (M.S.)
+  description:
+    Majored in Electorics Engineering (B.S.)
+    Majored in Convergence Engineering (M.S.)
+    Working as Deep Learning Engineer (Audio)
   gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
   contact:
-    # linkedin:  <hide>
-    github: https://github.com/JiwonKKim/JiwonKKim.github.io
+    linkedin: https://www.linkedin.com/in/jiwon-kim-148b74241/
+    github: https://github.com/JiwonKKim/
     # facebook:  <hide>
     # twitter:   <hide>
     # weibo:     <hide>
@@ -49,23 +50,19 @@ nav:
     - "/blog/ml/"
     - { Machine Learning: "/blog/ml/ml/" }
   DSP:
-<<<<<<< HEAD
-    - "/blog/dsp/"
-=======
     - '/blog/dsp/'
     - { Audio Signal Processing for Music Applications: '/blog/dsp/asp4ma'}
->>>>>>> b7025f3 (ASP post 0 updated)
   Algorithm:
     - "/blog/algorithm/"
   Paper:
     - "/blog/paper/"
-    # - { Audio Paper: '/blog/paper/audio'}
+    - { Audio: '/blog/paper/audio'}
   Graffiti:
     - "/blog/graffiti/"
   About:
     - "/about/"
-  # Github Project:
-  #   - 'https://github.com/JiwonKKim.github.io'
+#   Github Project:
+#     - 'https://github.com/JiwonKKim/'
 
 # Name of pages and url
 math_page:
@@ -77,8 +74,8 @@ dsp_page:
   - ['/blog/dsp/asp4ma', 'Audio Signal Processing for Music Applications']
 algorithm_page:
   - ["/blog/algorithm/", "Algorithm"]
-# paper_page:
-#   - ['/blog/paper/audio', 'Audio Paper']
+paper_page:
+  - ['/blog/paper/audio', 'Audio']
 graffiti_page:
   - ["/blog/graffiti/", "Graffiti"]
 
